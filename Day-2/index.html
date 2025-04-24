@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Karma:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins',sans-serif;
+    }
+
+    .card>img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+    }
+
+    .card-text {
+      height: 50px;
+    }
+
+    .navbar {
+      top: 0;
+      position: sticky;
+      z-index: 1;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary ">
+    <div class="container-fluid">
+      <a class="navbar-brand " href="#">
+        <img src="https://pimwp.s3-accelerate.amazonaws.com/2022/08/ekart.webp" height="30px" width="60px" alt="">
+      </a>
+      <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon  "></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+      
+            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#contact">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="#mens">Men's Clothing</a></li>
+              <li><a class="dropdown-item " href="#womens">Women's Clothing</a></li>
+              <li><a class="dropdown-item " href="#accessories">Accessories</a></li>
+              <li><a class="dropdown-item " href="#electronics">Electronics</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light " aria-disabled="true" href="#contact">About Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid d-flex justify-content-center align-items-center flex-wrap gap-3">
+    <!-- for modal button -->
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+           
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Alert</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Please Provide Your Confirmation </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Add to Cart</button>
+        <button type="button" class="btn btn-primary">
+          Buy Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- END of Modal content -->
+
+
+    
+
+    <!-- CARD 1 -->
+    <div id="mens" class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img height="330px" width="300px" src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+        class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Mens Cotton Jacket</h5>
+        <p class="card-text">Great outerwear for winter and rainy seasons.</p>
+        <p>&#8377;150</p>
+        <p>⭐⭐⭐⭐ (4.7/5)</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+  
+    <!-- CARD 2 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Slim Fit T-Shirt</h5>
+        <p class="card-text">Stylish and comfortable casual wear.</p>
+        <p>&#8377;100</p>
+        <p>⭐⭐⭐⭐ (4.1/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+    <!-- extra cards -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Slim Fit Collor T-Shirt</h5>
+        <p class="card-text">Stylish and comfortable casual wear.</p>
+        <p>&#8377;120</p>
+        <p>⭐⭐⭐⭐ (4/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+
+    <!-- CARD 3 -->
+    <div  id="womens" class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Women’s Short Sleeve</h5>
+        <p class="card-text">Soft cotton blend, great for summer.</p>
+        <p>&#8377;85</p>
+        <p>⭐⭐⭐ (3.5/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Women’s Jacket</h5>
+        <p class="card-text">Elegant and warm, perfect for winter.</p>
+        <p>&#8377;180</p>
+        <p>⭐⭐⭐⭐ (4.5/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+     <!-- CARD 5 -->
+     <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Women’s Casual Slim Fit</h5>
+        <p class="card-text">Great for formal and casual wear.</p>
+        <p>&#8377;130</p>
+        <p>⭐⭐⭐ (3.6/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+    <!-- extra cards -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Women’s Casual Wear
+        </h5>
+        <p class="card-text">Great for Casual and fit to wear.</p>
+        <p>&#8377;130</p>
+        <p>⭐⭐⭐ (3.6/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+
+    <!-- CARD 6 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Women's Solid Short Neck V</h5>
+        <p class="card-text">Made in USA or Imported, Lightweight fabric with great stretch for comfort</p>
+        <p>&#8377;400</p>
+        <p>⭐⭐⭐⭐ (4.8/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div id="accessories" class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg" class="card-img-top p-4"
+        alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Solid Gold Micropave</h5>
+        <p class="card-text">Elegant women’s jewelry for all occasions.</p>
+        <p>&#8377;300</p>
+        <p>⭐⭐⭐⭐ (4.4/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">John Hardy Bracelet</h5>
+        <p class="card-text">Stylish hand-crafted men’s bracelet.</p>
+        <p>&#8377;250</p>
+        <p>⭐⭐⭐⭐ (4.3/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- extra cards -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg" class="card-img-top p-4" alt="Product" height="400px">
+      <div class="card-body text-center">
+        <h5 class="card-title">Pierced Owl Rose Gold Plated Stainless Steel Double</h5>
+        <p class="card-text">Stylish hand-crafted womes’s ring</p>
+        <p>&#8377;299</p>
+        <p>⭐⭐⭐⭐ (4.9/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 8 -->
+    <div class="card m-3 shadow " style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Foldsack No. 1 Backpack</h5>
+        <p class="card-text">Your perfect pack for everyday use and walks in the forest</p>
+        <p> &#8377;120</p>
+        <p> ⭐⭐⭐ (3.9/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 9 -->
+    <div id="electronics" class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Samsung Galaxy Watch</h5>
+        <p class="card-text">Smartwatch with health tracking features.</p>
+        <p>&#8377;350</p>
+        <p>⭐⭐⭐⭐ (4.6/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div> 
+
+    <!-- CARD 10 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Acer Monitor 21.5”</h5>
+        <p class="card-text">1080p Full HD with HDMI and VGA input.</p>
+        <p>&#8377;400</p>
+        <p>⭐⭐⭐⭐ (4.8/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 11 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Silicon Power 256GB SSD </h5>
+        <p class="card-text" style="overflow: hidden;">3D NAND flash are applied to deliver high transfer speeds
+          Remarkable transfer speeds that enable faster bootup and improved overall system performance.</p>
+        <p>&#8377;300</p>
+        <p>⭐⭐⭐⭐ (4.3/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 12 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">WD 4TB Gaming Drive</h5>
+        <p class="card-text">Expand your PS4 gaming experience, Play anywhere Fast and easy</p>
+        <p>&#8377;499</p>
+        <p>⭐⭐⭐⭐ (4.8/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 13 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Acer SB220Q bi 21.5 inches Full HD IPS Ultra-Thin</h5>
+        <p class="card-text" style="overflow: hidden;">"21. 5 inches Full HD (1920 x 1080) widescreen IPS display And
+          Radeon free Sync technology.</p>
+        <p>&#8377;999</p>
+        <p>⭐⭐⭐ (3.6/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+    <!-- CARD 14 -->
+    <div class="card m-3 shadow-lg card-hover" style="width: 20rem; height: 34rem; ">
+      <img src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg" class="card-img-top p-4" alt="Product">
+      <div class="card-body text-center">
+        <h5 class="card-title">Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor </h5>
+        <p class="card-text " style="overflow:hidden">49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27
+          inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY</p>
+        <p>&#8377;400</p>
+        <p>⭐⭐⭐⭐ (4.8/5)</p>
+        <a href="#" class="btn btn-primary"
+        data-bs-toggle="modal" data-bs-target="#buyNowModal">BUY NOW</a>
+      </div>
+    </div>
+
+
+    <!-- CARD 15 -->
+    
+  </div>
+
+
+  <footer id="contact" class="bg-primary text-white text-center py-4 mt-4">
+    <div class="container">
+
+      <p>For More Enquiries </p>
+      <div class="d-flex justify-content-center gap-5">
+        <a href="#" class="text-white "><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white "><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <hr>
+      <p>Sector-1, Bengaluru, 560103 | India | support@ekart.com</p>
+      <p class="mb-0">&copy; 2025 All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
